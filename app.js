@@ -67,15 +67,11 @@ function letterGrade(percent){
   }
   return g;
 }
-
-console.log(letterGrade(81));
-console.log(letterGrade(92));
-console.log(letterGrade(47));
+console.log(letterGrade(81), letterGrade(92), letterGrade(47));
 
 function addTax(price, tax){
   return price + price * (tax / 100);
 }
-
 console.log(addTax(100, 10));
 
 // sum values in array
@@ -86,7 +82,6 @@ function sum(nums){
   }
   return sum;
 }
-
 console.log(sum([2,2,2]));
 
 
