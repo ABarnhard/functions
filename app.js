@@ -86,13 +86,40 @@ console.log(sum([2,2,2]));
 
 // factorial
 function factorial(num){
-  var sigma = 1;
-  num = num === 0 ? 1 : num;
-  for(var i = num; i > 0; i--){
-    sigma *= i;
+  var product = 1;
+
+  for(var i = 2; i <= num; i++){
+    product *= i;
   }
-  return sigma;
+  return product;
 }
 console.log(factorial(5));
 
+// random integer between 1 and 6
+function rollDie(sides){
+  return Math.floor(Math.random() * sides) + 1;
+}
+for(var e = 0; e < 2; e++){
+  console.log('roll:', rollDie(6));
+}
+
+// compare rolls of dice to check if pair
+function isPair(r1, r2){
+  return r1 === r2;
+}
+console.log(isPair(1, 2), isPair(1, 1));
+
+// count how many pairs from die rolls
+function countPairs(numRolls){
+  var counter = 0;
+
+  for(var i = 0; i <  numRolls; i++){
+    if(isPair(rollDie(6), rollDie(6))){
+      counter += 1;
+    }
+  }
+
+  return counter;
+}
+console.log('Number of pairs rolled:', countPairs(10000));
 
