@@ -42,10 +42,6 @@ console.log(volume2(area(2, 2), 2));
 
 
 
-console.log(
-    area(
-      square(
-        increment(3) + increment(4)
-      ), square(2)));
+console.log(area(square(increment(3) + increment(4)), square(2)));
 
 
