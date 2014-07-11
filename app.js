@@ -84,4 +84,15 @@ function sum(nums){
 }
 console.log(sum([2,2,2]));
 
+// factorial
+function factorial(num){
+  var sigma = 1;
+  num = num === 0 ? 1 : num;
+  for(var i = num; i > 0; i--){
+    sigma *= i;
+  }
+  return sigma;
+}
+console.log(factorial(5));
+
 
