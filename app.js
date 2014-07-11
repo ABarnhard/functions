@@ -51,3 +51,42 @@ function canDrink(age){
 console.log(canDrink(20));
 console.log(canDrink(21));
 
+// Numeric to letter grade
+function letterGrade(percent){
+  var g;
+  if(percent >= 90){
+    g = 'A';
+  }else if(percent >= 80){
+    g = 'B';
+  }else if(percent >= 70){
+    g = 'C';
+  }else if(percent >= 60){
+    g = 'D';
+  }else{
+    g = 'F';
+  }
+  return g;
+}
+
+console.log(letterGrade(81));
+console.log(letterGrade(92));
+console.log(letterGrade(47));
+
+function addTax(price, tax){
+  return price + price * (tax / 100);
+}
+
+console.log(addTax(100, 10));
+
+// sum values in array
+function sum(nums){
+  var sum = 0;
+  for(var i = 0; i < nums.length; i++){
+    sum += nums[i];
+  }
+  return sum;
+}
+
+console.log(sum([2,2,2]));
+
+
